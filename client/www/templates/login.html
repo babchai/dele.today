@@ -1,0 +1,42 @@
+<ion-view view-title="Register">
+  
+  <ion-content scroll="false">
+
+<!--
+     <div class="list list-inset">
+          <label class="item">
+            <button class="button button-block button-positive" ng-click="fbLogin()">
+                Login with Facebook
+            </button>
+        </label>
+    
+    <center><h3> OR </h3></center>
+  -->
+
+    <form ng-submit="doLogin()">
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="login.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="login.password">
+        </label>
+
+        <label class="item">
+
+          <button class="button button-block button-positive" type="submit">Log in</button>
+              <label class="button button-small button-light">
+                 Forget password
+               </label> 
+               <label class="button button-small button-light" ng-click="register()">
+                  Register
+               </label> 
+
+        </label>
+
+    </form>
+      </div>
+ 
+  </ion-content>
+</ion-view >

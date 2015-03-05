@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="lib/ionicons/css/ionicons.css">
+    <link rel="stylesheet" href="lib/ion-google-place/ion-google-place.css">
+
+    <!-- IF using   Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/leaflet/dist/leaflet.js"></script>
+    <script src="lib/angular-leaflet-directive/dist/angular-leaflet-directive.min.js"></script>
+    <script src="lib/leaflet-plugins/layer/tile/Google.js"></script>
+    <script src="lib/ionic-image-lazy-load/ionic-image-lazy-load.js"></script>
+    <script src="lib/ngAutocomplete/src/ngAutocomplete.js"></script>
+    <script src="lib/ion-google-place/ion-google-place.js"></script>
+    <script src="lib/angular-socket-io/socket.min.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+   <script src="http://cdn.socket.io/socket.io-1.0.3.js"></script>
+    <script src="lib/angular-base64/angular-base64.min.js"></script>
+    
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCZR40kKLZTJfQGn-bq9n0WNyyx9trm8ZI&libraries=places&sensor=true"></script>
+
+    
+    <script src="lib/OpenFB/openfb.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="cordova.js"></script>
+    
+    <!-- your app's js -->
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/controllers/playlists.js"></script>
+    <script src="js/controllers/map.js"></script>
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/dashboard.js"></script>
+    <script src="js/controllers/stream.js"></script>
+    <script src="js/controllers/form.js"></script>
+    <script src="js/controllers/checkout.js"></script>
+    <script src="js/controllers/register.js"></script>
+    <script src="js/controllers/main.js"></script>
+
+    
+    <script src="js/services/omiService.js"></script>
+    <script src="js/services/dataService.js"></script>
+    <script src="js/services/socketFactory.js"></script>  
+    <script src="js/services/authService.js"></script>
+    <script src="js/services/deleService.js"></script>
+    <script src="js/services/paymentService.js"></script>
+
+
+    <script src="js/directives/listenerDirective.js"></script>
+
+    <script src="lib/utils.js"></script>
+ <!--  <script src="js/services/locationService.js"></script> -->
+
+ <style>
+        .angular-leaflet-map {
+            width: 640px;
+            height: 470px;
+        },
+        #map{
+            height :100%;
+        }
+  </style> 
+    
+  </head>
+
+  <body ng-app="starter">
+    <ion-nav-view>
+      
+    </ion-nav-view>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<ion-view view-title=""  ng-init="init()">
+  	<ion-content >
+
+    
+    <div class="list list-inset">
+      
+	  <label class="item item-input item-text-wrap">
+	    <i class="icon ion-search placeholder-icon"></i>
+	      <ion-google-place id="pickup" placeholder="Pickup Point" ng-model="pickup" details="details1" enter="setView(pDetails,id)" />
+	  </label>
+	  <label class="item item-input item-text-wrap">
+	    <i class="icon ion-search placeholder-icon"></i>
+	      <ion-google-place id="destination" placeholder="Destination" ng-model="destination" details="details2" enter="setView(pDetails,id)" />
+	  </label>
+	 
+  
+
+
+	   <label class="item item-input item-stacked-label">
+	   	 <span class="input-label">Item Description</span>
+         <input type="text" ng-model="delivery.item.desctiption" placeholder="e.g. 3 medium size packages">
+
+
+	   </label>  
+
+     <div class="item item-input-inset">
+		    <label class="item-input-wrapper">
+		      <input type="text" placeholder="Instruction"  ng-model="instruction">
+		    </label>
+		    <button class="button button-small" ng-click="addInstruction()">
+		      Add
+		    </button>
+	  </div>
+	  <div class="item item-input-inset" ng-show="delivery.instructons.length">
+	    <ul>
+	      <li ng-Repeat = "i in delivery.instructons track by $index">{{i}}</li>
+	    </ul>
+	  </div>
+
+	   <label class="item item-input item-stacked-label">
+
+             <span>Fare : {{delivery.fare.text}}</span>
+	   </label>
+	     <br>
+
+	  <button class="button button-block button-positive" style="bottom:10px" ng-click="checkout()" ng-disabled="buttonDisable">
+					Next
+	  </button>
+        
+   </div>
+    
+  	
+  	
+
+    
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,71 @@
+<ion-view view-title="Register">
+  <ion-content scroll="true">
+  <form name="registerForm" ng-submit="register()" novalidate>
+   <div class="card">
+   <div class="item item-divider">
+   		Your Profile
+  </div>
+  
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Name" ng-model = "profile.name" >
+  </label>
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Email</span>
+    <input type="email" placeholder="Email" ng-model = "profile.email" >
+  </label>
+  
+  <label class="item item-input item-floating-label">
+    <span class="input-label">Password</span>
+    <input type="password" placeholder="Password" ng-model = "profile.credential" >
+  </label>
+
+	<div class="item row">
+	<label class=" item-input item-floating-label col col-20">
+		      <span class="input-label">Prefix</span>
+
+	      <input type="text" placeholder="Prefix" ng-model = "profile.contact.prefix" >
+	   </label>
+	  <label class="item-input item-floating-label col col-85">
+	      <span class="input-label">Phone Number</span>
+	      <input type="text" placeholder="Phone Number" ng-model="profile.contact.number" >
+	   </label>
+	</div>
+
+   </div>
+
+	<div class="card">
+       
+	     <div class="item item-divider">
+	     	Your Cards
+	     </div>
+	     <label class="item item-input item-floating-label col col-100">
+			<span class="input-label">Credit Card Number</span>
+	      <input type="text" placeholder="Credit Card Number" ng-model="profile.creditcard.number" >
+        </label>
+        <div class = "item row">
+	        <label class="item-input item-floating-label col col-20">
+				<span class="input-label">MM</span>
+		      <input type="text" placeholder="MM" ng-model = "profile.creditcard.mm" >
+	        </label>
+	        <label class="item-input item-floating-label col col-20">
+				<span class="input-label">YY</span>
+		      <input type="text" placeholder="YY" ng-model="profile.creditcard.yy" >
+	        </label>
+	        <label class="item-input item-floating-label col col-60">
+				<span class="input-label">CCV</span>
+		      <input type="text" placeholder="CCV" ng-model="profile.creditcard.ccv" >
+	        </label>
+    	</div>
+       
+
+	</div>
+        <div class="list list-inset">
+            <button   type="submit" class="button button-block button-positive" >
+  				Register Me!
+            </button>
+        </div>
+
+  </form>
+  </ion-content>
+</ion-view>

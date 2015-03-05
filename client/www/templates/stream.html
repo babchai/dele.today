@@ -1,0 +1,29 @@
+<ion-view view-title="Browse">
+  <ion-content lazy-scroll>
+  
+  <ion-refresher on-refresh="doRefresh()">
+  </ion-refresher>
+ 
+  <div class="list card" ng-repeat = "stream in streams.data | orderBy:predicate">
+
+    <div class="item item-avatar">
+          <img image-lazy-src="http://graph.facebook.com/{{stream.users.identities[0].profile.id}}/picture?width=270&height=270"/>
+           <h2>{{stream.profile.name}}</h2>
+          <p>{{stream.message}}</p>
+    </div>
+    <div class="item item-divider tabs tabs-secondary tabs-icon-left">
+         <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+    </div>
+</ion-content>
+</ion-view>

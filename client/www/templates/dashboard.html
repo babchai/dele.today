@@ -1,0 +1,51 @@
+<ion-view title="Dashboard" ng-show="ready">
+    <ion-content class="has-header">
+        <div class="list card">
+            <div class="item item-avatar">
+              <img src="img/user-5.png"/>
+                
+                <h2>{{profile.name}}</h2>
+                <p>{{profile.email}}</p>
+                <p>{{profile.contact.prefix}}{{profile.contact.number}}</p>
+            </div>
+
+        </div>
+        <div class="list card">
+            <div class="item item-divider">
+	     	     Your Cards
+	        </div>
+	        <div class="item  item-text-wrap" ng-repeat="card in creditcards">
+                <div class ="row">  
+                    <div class="col-20"><p>{{card.name}}</p></div> 
+                    <div class="col-70"><p>{{card.number}}</p></div>
+                </div>
+                </p>
+	        </div>
+            <div class = "item" ng-show="!creditcards.length">
+                No cards
+            </div>
+
+        </div>
+        
+        <div class="list card">
+            <div class="item item-divider">
+            	Deliveries
+	        </div>
+	        <div class="item  item-text-wrap" ng-repeat="delivery in deliveries">
+                
+	        </div>
+
+              <div class = "item" ng-show="!deliveries.length">
+                No delivery yet
+            </div>
+
+        </div>
+
+    <div class="list list-inset">
+          <button type="button" class="button button-block button-positive" ng-click="signout()" >
+                  Logout
+            </button>
+          </div>
+
+    </ion-content>
+</ion-view>

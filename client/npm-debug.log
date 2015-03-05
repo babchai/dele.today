@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'ngCookies' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 warn package.json client@1.0.0 No repository field.
+5 warn package.json client@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'ngCookies', null ]
+8 verbose cache add name=undefined spec="ngCookies" args=["ngCookies",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'ngCookies',
+9 verbose parsed url   path: 'ngCookies',
+9 verbose parsed url   href: 'ngCookies' }
+10 silly lockFile 584da53c-ngCookies ngCookies
+11 verbose lock ngCookies /Users/saichangchoon/.npm/584da53c-ngCookies.lock
+12 silly lockFile 584da53c-ngCookies ngCookies
+13 silly lockFile 584da53c-ngCookies ngCookies
+14 verbose addNamed [ 'ngCookies', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile 7da90939-ngCookies ngCookies@
+17 verbose lock ngCookies@ /Users/saichangchoon/.npm/7da90939-ngCookies.lock
+18 silly addNameRange { name: 'ngCookies', range: '*', hasData: false }
+19 verbose request where is /ngCookies
+20 verbose request registry https://registry.npmjs.org/
+21 verbose request id 1654fc53aa692386
+22 verbose url raw /ngCookies
+23 verbose url resolving [ 'https://registry.npmjs.org/', './ngCookies' ]
+24 verbose url resolved https://registry.npmjs.org/ngCookies
+25 verbose request where is https://registry.npmjs.org/ngCookies
+26 info trying registry request attempt 1 at 16:54:41
+27 http GET https://registry.npmjs.org/ngCookies
+28 http 404 https://registry.npmjs.org/ngCookies
+29 verbose headers { date: 'Wed, 25 Feb 2015 08:54:44 GMT',
+29 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+29 verbose headers   'content-type': 'application/json',
+29 verbose headers   'cache-control': 'max-age=0',
+29 verbose headers   'content-length': '52',
+29 verbose headers   'accept-ranges': 'bytes',
+29 verbose headers   via: '1.1 varnish',
+29 verbose headers   age: '0',
+29 verbose headers   'x-served-by': 'cache-hk93-HKG',
+29 verbose headers   'x-cache': 'MISS',
+29 verbose headers   'x-cache-hits': '0',
+29 verbose headers   'x-timer': 'S1424854483.528779,VS0,VE705',
+29 verbose headers   'keep-alive': 'timeout=10, max=50',
+29 verbose headers   connection: 'Keep-Alive' }
+30 silly registry.get cb [ 404,
+30 silly registry.get   { date: 'Wed, 25 Feb 2015 08:54:44 GMT',
+30 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 silly registry.get     'content-type': 'application/json',
+30 silly registry.get     'cache-control': 'max-age=0',
+30 silly registry.get     'content-length': '52',
+30 silly registry.get     'accept-ranges': 'bytes',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     age: '0',
+30 silly registry.get     'x-served-by': 'cache-hk93-HKG',
+30 silly registry.get     'x-cache': 'MISS',
+30 silly registry.get     'x-cache-hits': '0',
+30 silly registry.get     'x-timer': 'S1424854483.528779,VS0,VE705',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 silly lockFile 7da90939-ngCookies ngCookies@
+32 silly lockFile 7da90939-ngCookies ngCookies@
+33 error 404 404 Not Found: ngCookies
+33 error 404
+33 error 404 'ngCookies' is not in the npm registry.
+33 error 404 You should bug the author to publish it
+33 error 404 It was specified as a dependency of 'client'
+33 error 404
+33 error 404 Note that you can also install from a
+33 error 404 tarball, folder, or http url, or git url.
+34 error System Darwin 13.4.0
+35 error command "node" "/usr/local/bin/npm" "install" "ngCookies"
+36 error cwd /Library/WebServer/Documents/omi/client
+37 error node -v v0.10.35
+38 error npm -v 1.4.28
+39 error code E404
+40 verbose exit [ 1, true ]

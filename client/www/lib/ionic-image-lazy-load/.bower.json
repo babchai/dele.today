@@ -1,0 +1,14 @@
+{
+  "name": "ionic-image-lazy-load",
+  "homepage": "https://github.com/paveisistemas/ionic-image-lazy-load",
+  "_release": "da72b47f29",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "da72b47f293db77fdbab2a795fff548d896f8eb5"
+  },
+  "_source": "https://github.com/paveisistemas/ionic-image-lazy-load.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/paveisistemas/ionic-image-lazy-load.git",
+  "_direct": true
+}

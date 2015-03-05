@@ -1,0 +1,32 @@
+<ion-view view-title="Confirmation">
+    
+  <ion-content>
+    
+     <div class="list">
+	  	<label class = "item item-text-wrap">
+       		 <h2>{{delivery.pickup.name}}</h2>
+        	<p>{{delivery.pickup.formatted_address}} </p>
+		</label>
+	 
+	  	<label class = "item item-text-wrap">
+       		 <h2>{{delivery.destination.name}}</h2>
+        	<p>{{delivery.destination.formatted_address}} </p>
+		</label>
+	
+
+	
+
+  </div>
+  <div>
+     <center><h1>{{delivery.fare.text}}</h1></center>
+  </div>
+    
+    <div class="list list-inset">
+		<button class="button button-block button-positive" style="bottom:10px" ng-click="checkout()">
+				Request Dele!
+		</button>
+	</div>
+
+
+   </ion-content>
+</ion-view>
