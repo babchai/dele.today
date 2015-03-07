@@ -18,7 +18,7 @@ var server = new Hapi.Server();
 
 
 server.connection({
-	  host : "localhost",
+	  host : "0.0.0.0",
       port: 3000,
       routes:{
       	cors:true
@@ -36,6 +36,11 @@ server.route({
     }
 });
 
+server.route({
+    method : 'POST',
+    path: '/delivery',
+    handler:handlers.delivery
+});
 
 server.route({
     method: 'GET',
@@ -44,6 +49,14 @@ server.route({
     
 });
 
+server.route({
+        method:'OPTIONS',
+        path:'/',
+        handler: function(request, reply){
+            console.log("OPTIONS");
+            return reply("OK").code(401);
+        }
+    });
 
 
 server.register([
@@ -74,7 +87,14 @@ server.register([
 
     server.auth.strategy('simple', 'basic', { validateFunc: handlers.authenticate.basic});
 
-  
+    server.route({
+        method:'OPTIONS',
+        path:'/s',
+        handler: function(request, reply){
+            console.log("OPTIONS");
+            return reply("OK").code(401);
+        }
+    });
 
     server.route({
         method: 'GET',

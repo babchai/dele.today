@@ -2,9 +2,9 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout, $cordovaGeolocation) {
    
-  document.addEventListener("deviceready", onDeviceReadyGeo, false);
+  //document.addEventListener("deviceready", onDeviceReadyGeo, false);
 
-  function onDeviceReadyGeo() { 
+ /* function onDeviceReadyGeo() { 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position){
         console.log(position);
@@ -14,7 +14,7 @@ angular.module('starter.controllers', [])
     } else {
       error('Geo Location is not supported');
     }
-  }
+  }*/
 
 
 });

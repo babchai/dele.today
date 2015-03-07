@@ -17,8 +17,6 @@ angular.module('starter')
     				dataType: 'json',
             		url: url+"register",
             		data:data
-            		//data : {"email":"babchaihaha@hotmail.com","name":{"first":"bab","last":"bab"},"country":"malaysia","contact":{"prefix":"60","number":"0163771829"},"credential": "macro123"}
-
             	}
             	).success(function(response){
             		console.log(response);
@@ -30,8 +28,8 @@ angular.module('starter')
             	});
     	},
     	login : function(data, cb){
-           console.log(data);
 
+      
 			  $http.defaults.headers.common.Authorization = 'Basic ' + $base64.encode(data.email + ':' + data.password);
 
          $http(
@@ -54,7 +52,32 @@ angular.module('starter')
 
            	});
 
-    	}
-    }
+    	},
+   
+    delivery:function(data, cb){
+        $http(
+        {
+          withCredentials : false,
+          method: 'POST',
+          url: url+"delivery",
+          headers: {
+                  "Content-Type": "application/json"
+              },
+          dataType: 'json',
+          data:data
+        })
+        .success(function(response){
+              console.log(response);
+              return cb(null, response);
 
+            }).error(function(error){
+
+              console.log(error);
+              return cb(error);
+
+            });
+
+
+    },
+ }
 });

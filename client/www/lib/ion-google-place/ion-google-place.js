@@ -44,6 +44,32 @@ angular.module('ion-google-place', [])
                         '</div>'
                     ].join('');
 
+                    /*var POPUP_TPL = [
+                        '<div class="ion-google-place-container" style="height:100%">',
+                            '<ion-content>',
+                                '<div class="item-input-inset">',
+                                    '<label class="item-input-wrapper">',
+                                        '<input type="text" ngModel="receipient" planceholder="Enter receipient contact">',
+                                    '</label>',
+                                '</div>',
+                                '<div class="item-input-inset">',
+                                        '<label class="item-input-wrapper">',
+                                            '<i class="icon ion-ios7-search placeholder-icon"></i>',
+                                            '<input class="google-place-search" type="search" ng-model="searchQuery" placeholder="Enter an address, place or ZIP code">',
+                                        '</label>',
+                                        '<button class="button button-clear">',
+                                            'Cancel',
+                                        '</button>',
+                                '</div>',
+                                '<ion-list>',
+                                            '<ion-item ng-repeat="location in locations" type="item-text-wrap" ng-click="selectLocation(location)">',
+                                                '<p>{{location.description}}</p>',
+                                            '</ion-item>',
+                                '</ion-list>',
+                          '</ion-content>',
+                        '</div>'
+                    ].join('');*/
+
                     var popupPromise = $ionicTemplateLoader.compile({
                         template: POPUP_TPL,
                         scope: scope,

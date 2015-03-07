@@ -8,9 +8,12 @@ angular.module('starter.controllers')
             data = this.login;
 
             deleService.login(data, function(err, result){
-                if(!err)
+                if(!err )
                 {
                   console.log(result);
+
+                  if(result !=null)
+                  {
                    window.localStorage['profile'] = JSON.stringify(result);
 
 
@@ -18,7 +21,12 @@ angular.module('starter.controllers')
                     $ionicHistory.nextViewOptions({
                       disableBack: true
                     });
-                   $state.go("app.map");
+                  $state.go("app.map");
+                 }
+                 else
+                 {
+                    alert("Opps! System error. ");
+                 }
                 }
                 else
                 {

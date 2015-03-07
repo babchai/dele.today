@@ -4,18 +4,14 @@
     
      <div class="list">
 	  	<label class = "item item-text-wrap">
-       		 <h2>{{delivery.pickup.name}}</h2>
-        	<p>{{delivery.pickup.formatted_address}} </p>
+       		 <h2>{{delivery.addresses.pickup.name}}</h2>
+        	<p>{{delivery.addresses.pickup.formatted_address}} </p>
 		</label>
 	 
 	  	<label class = "item item-text-wrap">
-       		 <h2>{{delivery.destination.name}}</h2>
-        	<p>{{delivery.destination.formatted_address}} </p>
+       		 <h2>{{delivery.addresses.destination.name}}</h2>
+        	<p>{{delivery.addresses.destination.formatted_address}} </p>
 		</label>
-	
-
-	
-
   </div>
   <div>
      <center><h1>{{delivery.fare.text}}</h1></center>

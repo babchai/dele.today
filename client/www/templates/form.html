@@ -1,13 +1,28 @@
-<ion-modal-view>
-  <ion-header-bar>
-    <h1 class="title">Login</h1>
-    <div class="buttons">
-      <button class="button button-clear" ng-click="closeLogin()">Close</button>
-    </div>
-  </ion-header-bar>
+<ion-view>
   <ion-content>
-    <input ng-model="temp"> 
-    {{temp}}
-    <input type="button" ng-click="update()"> 
+
+                        <div class="item-input-inset">
+                            <label class="item-input-wrapper">
+                                <input type="text" ngModel="receipient" planceholder="Enter receipient contact">
+                            </label>
+
+                        </div>
+                        <div class="item-input-inset">
+                                <label class="item-input-wrapper">
+                                    <i class="icon ion-ios7-search placeholder-icon"></i>
+                                    <input class="google-place-search" type="search" ng-model="searchQuery" placeholder="Enter an address, place or ZIP code">
+                                </label>
+                                <button class="button button-clear">
+                                    Cancel
+                                </button>
+                        </div>
+                        <ion-list>
+                                    <ion-item ng-repeat="location in locations" type="item-text-wrap" ng-click="selectLocation(location)">
+                                        <p>{{location.description}}</p>
+                                    </ion-item>
+                        </ion-list>
+
   </ion-content>
-</ion-modal-view>
+
+</ion-view>
+

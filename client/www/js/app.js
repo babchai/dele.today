@@ -71,6 +71,7 @@ angular.module('starter', [
   })
   .state('app.login', {
     url: "/login",
+    params: ['redirect'],
     views: {
       'menuContent': {
         templateUrl: "templates/login.html",

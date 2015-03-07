@@ -2,33 +2,34 @@ angular.module('starter.controllers')
 .controller('MainCtrl',function($scope, $ionicLoading, $compile, dataService, $ionicHistory,$state){
 
   $scope.delivery = {};
-  $scope.delivery.instructons = [];
+  $scope.delivery.addresses={};
+  $scope.delivery.instructions = [];
   $scope.buttonDisable = true;
 
   $scope.setView = function(pDetails, id){
   	console.log(id);
 
   	if(id == 'pickup'){
-  		$scope.delivery.pickup = pDetails;
+  		$scope.delivery.addresses.pickup = pDetails;
   	}
 
 
     if(id = 'destination')
     {
 
-    	$scope.delivery.destination = pDetails;
+    	$scope.delivery.addresses.destination = pDetails;
 
     }      
 
-    if(typeof($scope.delivery.destination) != 'undefined' && typeof($scope.delivery.pickup) !='undefined' )
+    if(typeof($scope.delivery.addresses.destination) != 'undefined' && typeof($scope.delivery.addresses.pickup) !='undefined' )
     {
     	   var fare = {};
 
     	  var distance = new google.maps.DistanceMatrixService();
 
 	      distance.getDistanceMatrix({
-	        origins: [$scope.delivery.pickup.geometry.location],
-	        destinations: [$scope.delivery.destination.geometry.location],
+	        origins: [$scope.delivery.addresses.pickup.geometry.location],
+	        destinations: [$scope.delivery.addresses.destination.geometry.location],
 	        travelMode: google.maps.TravelMode.DRIVING
 	      }, function(response, status){
 	      	
@@ -46,7 +47,7 @@ angular.module('starter.controllers')
 	         }
 	         else
 	         {
-	         	alert("opps! We don't have rocket.");
+	         	alert("opps! We don't have rocket yet... :p");
 	         	$scope.delivery.fare = "";
 	         	$scope.buttonDisable = true;
 	         	$scope.$apply();
@@ -62,10 +63,10 @@ angular.module('starter.controllers')
          console.log("glad");
          console.log(this.instruction);
 
-          $scope.delivery.instructons.push(this.instruction);
+          $scope.delivery.instructions.push(this.instruction);
 
-          $scope.instructons = "";
-           this.instructons = ""
+          $scope.instructions = "";
+           this.instructions = ""
           //$scope.$apply();
    }
 

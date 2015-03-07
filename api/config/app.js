@@ -21,6 +21,14 @@ module.exports = {
     accessToken:{
     	defaultTTL : 126000
 
+    },
+    delivery:{
+        STATUS:{
+            PENDING : 'PENDING',
+            PROCESSING: 'PROCESSING',
+            COMPLETED : 'COMPLETED',
+            CANCELLED : 'CANCELLED'
+        }
     }
 
 }
