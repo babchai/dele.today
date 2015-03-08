@@ -65,6 +65,7 @@ module.exports.basic  = function (req, reply) {
                    	console.log(profile.name);
 
                    	 var ret = {};
+                       ret.id = profile.id;
                    	   ret.name = profile.name;
                        ret.email = profile.email;
                        ret.contact = profile.contact;
@@ -83,6 +84,7 @@ module.exports.basic  = function (req, reply) {
                        }
 
                        ret.creditcard = tmp;
+                       ret.user_id = user.id;
 
 
                         models.accessToken.create({

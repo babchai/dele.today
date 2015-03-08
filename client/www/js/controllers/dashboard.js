@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-  .controller('DashboardCtrl', function ($scope ,$http, $state,$ionicHistory ) {
+  .controller('DashboardCtrl', function ($scope ,$http, $state,$ionicHistory, deleService ) {
 
   		 //console.log(window.localStorage.profile);
          if(typeof window.localStorage['profile'] !='undefined')
@@ -10,7 +10,15 @@ angular.module('starter.controllers')
 
          	$scope.creditcards = $scope.profile.creditcard;
 
-         	$scope.ready = true;
+         	$scope.ready = true; 
+
+            deleService.pullDelivery({user_id : Profile.user_id}, function(err, deliveries){
+               if(!err)
+               {
+                 $scope.deliveries  = deliveries;
+               }
+
+            });
          }
          else
          {
@@ -21,6 +29,9 @@ angular.module('starter.controllers')
 	        });
          	 $state.go("app.login");
          }
+
+
+        
 
 
          $scope.signout = function(){

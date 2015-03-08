@@ -1,8 +1,8 @@
 angular.module('starter.controllers')
-  .controller('LoginCtrl', function ($scope ,$http, $location, $state, $cookieStore, $ionicHistory, deleService) {
+  .controller('LoginCtrl', function ($scope ,$http, $location, $state, $cookieStore, $ionicHistory, deleService,$stateParams) {
     
 
-
+      // console.log($stateParams);
        $scope.doLogin =function(){
 
             data = this.login;
@@ -14,14 +14,19 @@ angular.module('starter.controllers')
 
                   if(result !=null)
                   {
-                   window.localStorage['profile'] = JSON.stringify(result);
+                    window.localStorage['profile'] = JSON.stringify(result);
 
-
-                   
                     $ionicHistory.nextViewOptions({
                       disableBack: true
                     });
-                  $state.go("app.map");
+                   if($stateParams.redirect !="")
+                   {
+                      $state.go($stateParams.redirect);
+                   }
+                   else
+                   {
+                      $state.go("app.map");
+                   }
                  }
                  else
                  {

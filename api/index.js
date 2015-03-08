@@ -39,7 +39,13 @@ server.route({
 server.route({
     method : 'POST',
     path: '/delivery',
-    handler:handlers.delivery
+    handler:handlers.delivery.create
+});
+
+server.route({
+    method : 'GET',
+    path: '/delivery/user/{id}',
+    handler:handlers.delivery.getUserDelivery
 });
 
 server.route({

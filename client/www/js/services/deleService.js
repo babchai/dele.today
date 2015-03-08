@@ -53,8 +53,29 @@ angular.module('starter')
            	});
 
     	},
-   
-    delivery:function(data, cb){
+      pullDelivery:function(data, cb){
+        $http(
+        {
+          withCredentials : false,
+          method: 'GET',
+          url: url+"delivery/user/"+data.user_id,
+          headers: {
+                  "Content-Type": "application/json"
+              },
+          dataType: 'json'
+        })
+        .success(function(response){
+              console.log(response);
+              return cb(null, response);
+
+         }).error(function(error){
+
+              console.log(error);
+              return cb(error);
+
+         });
+    },
+    createDelivery:function(data, cb){
         $http(
         {
           withCredentials : false,
@@ -67,17 +88,13 @@ angular.module('starter')
           data:data
         })
         .success(function(response){
-              console.log(response);
               return cb(null, response);
 
             }).error(function(error){
-
-              console.log(error);
               return cb(error);
-
             });
+    }
+    
 
-
-    },
  }
 });

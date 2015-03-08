@@ -16,8 +16,9 @@
 	        </div>
 	        <div class="item  item-text-wrap" ng-repeat="card in creditcards">
                 <div class ="row">  
-                    <div class="col-20"><p>{{card.name}}</p></div> 
-                    <div class="col-70"><p>{{card.number}}</p></div>
+                    <div class="col col-40"><p>{{card.type}}</p></div> 
+                    <div class="col col-40"><p>{{card.name}}</p></div> 
+                    <div class="col col-60"><p>{{card.number}}</p></div>
                 </div>
                 </p>
 	        </div>
@@ -31,8 +32,17 @@
             <div class="item item-divider">
             	Deliveries
 	        </div>
-	        <div class="item  item-text-wrap" ng-repeat="delivery in deliveries">
-                
+	        <div class=" item  item-text-wrap" ng-repeat="delivery in deliveries">
+                <div class="row">
+                    <div class="col col-40"><p>{{delivery.date.request | date : shortDate}}</div>
+                    <div class="col col-30">
+                        <p>{{delivery.fare.text}}</p>
+                    </div>
+                    <div class="col col-30">
+                        <p>{{delivery.status}}</p>
+                    </div>
+
+                </div>
 	        </div>
 
               <div class = "item" ng-show="!deliveries.length">
