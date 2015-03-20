@@ -6,6 +6,10 @@ var  HTTPStatus = require('http-status');
 var script = require("../script.js");
 var mongoose = require("mongoose");
 
+var assignJob = function(data){
+    
+
+}
 
 module.exports.getUserDelivery = function(request, reply)
 {

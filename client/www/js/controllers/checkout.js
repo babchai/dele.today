@@ -11,7 +11,7 @@ angular.module('starter.controllers')
         $scope.checkout = function(){
 
              Profile = window.localStorage['profile'];
-             Profile = JSON.parse(Profile);
+            
 
              if(Profile == null)
              {
@@ -19,7 +19,7 @@ angular.module('starter.controllers')
 
              }
              else{
-
+                Profile = JSON.parse(Profile);
                 console.log(Profile);
                 $scope.delivery.requesterID = Profile.user_id;
                 console.log(this.delivery);
